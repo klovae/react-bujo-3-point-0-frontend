@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { fetchAllTasks } from "../actions/taskActions";
 import Tasks from '../components/Tasks'
+import TaskInput from '../components/TaskInput'
 
 
 class AllTasksContainer extends Component {
@@ -15,6 +16,7 @@ class AllTasksContainer extends Component {
       <div>
         <h1>All Tasks</h1>
         <Tasks tasks={this.props.tasks} />
+        <TaskInput />
       </div>
     )
   }
