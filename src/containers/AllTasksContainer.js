@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { fetchAllTasks } from "../actions/taskActions";
+import Tasks from '../components/Tasks'
 
 
 class AllTasksContainer extends Component {
@@ -13,16 +14,14 @@ class AllTasksContainer extends Component {
     return (
       <div>
         <h1>All Tasks</h1>
-        <ul>
-          {this.props.tasks.map((task) => <li key={task.id}>{task.content}</li>)}
-        </ul>
+        <Tasks tasks={this.props.tasks} />
       </div>
     )
   }
 }
 
 AllTasksContainer.defaultProps = {
-  tasks: [ "Tasks Are Loading"]
+  tasks: [ "Tasks Are Loading" ]
 }
 
 const mapStateToProps = state => {
