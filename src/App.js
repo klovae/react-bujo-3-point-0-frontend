@@ -1,5 +1,5 @@
 import React from 'react'
-import AllTasksContainer from './containers/TasksContainer'
+import AllTasksContainer from './containers/AllTasksContainer'
 
 class App extends React.Component {
   render () {
