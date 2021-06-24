@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { fetchAllTasks } from "../actions/taskActions";
+import { fetchTasks } from "../actions/taskActions";
 import Tasks from '../components/Tasks'
 import TaskInput from '../components/TaskInput'
 
 
-class AllTasksContainer extends Component {
+class TasksContainer extends Component {
 
   componentDidMount() {
-    this.props.fetchAllTasks()
+    this.props.fetchTasks()
   }
 
   render() {
@@ -22,7 +22,7 @@ class AllTasksContainer extends Component {
   }
 }
 
-AllTasksContainer.defaultProps = {
+TasksContainer.defaultProps = {
   tasks: [ "Tasks Are Loading" ]
 }
 
@@ -35,8 +35,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchAllTasks: () => dispatch(fetchAllTasks())
+    fetchTasks: () => dispatch(fetchTasks())
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllTasksContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(TasksContainer);
