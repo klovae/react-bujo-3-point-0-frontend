@@ -1,0 +1,92 @@
+body {
+  background-image: url(./images/dot_grid.png);
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  height: 100%;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 1.2em 0;
+}
+
+
+a {
+  text-decoration: none;
+  color: #08A854;
+  transition: color 0.2s linear;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+#all-wrap {
+  width: 60%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .7);
+  padding: 0 5%;
+  margin: auto;
+}
+
+ /* /////// FORM STYLES //////// */
+  
+ form input[type="text"], form input[type="password"], form input[type="email"] {
+  padding: 12px 16px 10px;
+  width: 70%;
+  border: none;
+  border-bottom: 3px solid #888;
+  box-sizing: border-box;
+  font-size: .9em;
+  margin: 6px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+form input[type="text"]:focus, form input[type="password"]:focus, form input[type="email"]:focus {
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #08A854;
+}
+
+div.icon input[type=button], div.icon input[type=submit] {
+  background-color: transparent;
+  border: 2px solid transparent;
+  text-decoration: none;
+  line-height: 1em;
+  cursor: pointer;
+  padding: 0px 12px;
+  margin: 0px;
+} 
+
+div #task_content {
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin-right: 6px;
+  width: 80%;
+}
+
+input[type=button], input[type=submit], div.button {
+  background-color: #08A854;
+  border: none;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin-top: 20px;
+  display: inline-block;
+}
