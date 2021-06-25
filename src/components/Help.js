@@ -10,7 +10,7 @@ const Help = () => {
         </p>
 
         <p>
-          If you're unfamiliar with Bullet Journaling, be sure to check out the <a href="http://bulletjournal.com/get-started/">"Get Started" section</a> on Bulletjournal.com.
+          If you're unfamiliar with Bullet Journaling, be sure to check out the <a href="http://bulletjournal.com/pages/learn/">"Get Started" section</a> on Bulletjournal.com.
         </p>
 
         <h2>What BuJo 3.0 Can Do</h2>

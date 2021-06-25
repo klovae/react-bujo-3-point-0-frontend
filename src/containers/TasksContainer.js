@@ -15,8 +15,8 @@ class TasksContainer extends Component {
     return (
       <div>
         <h1>All Tasks</h1>
-        <Tasks tasks={this.props.tasks} />
         <TaskInput />
+        <Tasks tasks={this.props.tasks} />
       </div>
     )
   }

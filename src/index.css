@@ -90,30 +90,11 @@ form input[type="text"]:focus, form input[type="password"]:focus, form input[typ
   border-bottom: 3px solid #08A854;
 }
 
-div.icon input[type=button], div.icon input[type=submit] {
-  background-color: transparent;
-  border: 2px solid transparent;
-  text-decoration: none;
-  line-height: 1em;
-  cursor: pointer;
-  padding: 0px 12px;
-  margin: 0px;
-} 
-
-div #task_content {
-  display: inline-block;
-  padding: 5px;
-  margin-bottom: 20px;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  margin-right: 6px;
-  width: 80%;
-}
-
-input[type=button], input[type=submit], div.button {
+input[type=button], input[type=submit] {
   background-color: #08A854;
   border: none;
   color: #fff;
+  cursor: pointer;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1em;
   text-decoration: none;
@@ -125,4 +106,62 @@ input[type=button], input[type=submit], div.button {
 #logo {
   width: 160px;
   margin-bottom: 20px;
+}
+
+/* /////////// ICONS ///////////////// */
+div.task-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+button.icon {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  margin: 0 3px;
+  transition: background-image 0.3s linear;
+  cursor: pointer;
+}
+
+button.complete {
+  background-image: url(./images/bullet-icon-01.png);
+  background-size: cover;
+}
+
+button.complete:hover {
+  background-image: url(./images/letter-x.png);
+  background-size: cover;
+}
+
+button.delete {
+  background-image: url(./images/rubbish-binblk.png);
+  background-size: contain;
+}
+
+button.delete:hover {
+  background-image: url(./images/rubbish-bingrn.png);
+  background-size: contain;
+}
+
+button.edit {
+  background-image: url(./images/editblk.png);
+  background-size: contain;
+}
+
+button.edit:hover {
+  background-image: url(./images/edit-grn.png);
+  background-size: contain;
+}
+
+
+button.migrate {
+    background-image: url(./images/scroll-arrow-to-rightblk.png);
+    background-size: contain;
+}
+
+button.migrate:hover {
+    background-image: url(./images/scroll-arrow-to-rightgrn.png);
+    background-size: contain;
 }
