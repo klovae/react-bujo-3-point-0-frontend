@@ -33,12 +33,32 @@ a:hover {
 }
 
 #all-wrap {
-  width: 60%;
-  height: 100%;
+  width: 75%;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 100px;
+  grid-template-areas: 
+     "n n n c c c c c c c c c"
+     "f f f f f f f f f f f f";
   background-color: rgba(255, 255, 255, .7);
-  padding: 0 5%;
+  padding: 3%;
   margin: auto;
 }
+
+#nav-wrap {
+  font-size: 1.2em;
+  font-weight: 600;
+  grid-area: n;
+ }
+
+ #content-wrap {
+   grid-area: c;
+ }
+
+ #footer {
+   grid-area: f;
+ }
 
  /* /////// FORM STYLES //////// */
   
@@ -89,4 +109,8 @@ input[type=button], input[type=submit], div.button {
   padding: 12px 20px;
   margin-top: 20px;
   display: inline-block;
+}
+
+#logo {
+  width: 160px;
 }
