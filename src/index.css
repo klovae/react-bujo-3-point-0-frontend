@@ -9,7 +9,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h2 {
@@ -32,6 +32,18 @@ a:hover {
   color: #000;
 }
 
+#nav a {
+  display: block;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+div.line {
+  width:50%;
+  border-bottom: 2px solid #000;
+  margin: 20px 0;
+}
+
 #all-wrap {
   width: 75%;
   display: grid;
@@ -47,18 +59,17 @@ a:hover {
 }
 
 #nav-wrap {
-  font-size: 1.2em;
-  font-weight: 600;
   grid-area: n;
- }
+}
 
- #content-wrap {
-   grid-area: c;
- }
+#content-wrap {
+  grid-area: c;
+}
 
- #footer {
-   grid-area: f;
- }
+#footer {
+  grid-area: f;
+}
+
 
  /* /////// FORM STYLES //////// */
   
@@ -113,4 +124,5 @@ input[type=button], input[type=submit], div.button {
 
 #logo {
   width: 160px;
+  margin-bottom: 20px;
 }
