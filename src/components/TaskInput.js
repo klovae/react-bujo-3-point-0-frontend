@@ -23,8 +23,8 @@ class TaskInput extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <input type="submit" className="icon add" value=''></input> 
           <input type="text" name="content" onChange={this.handleChange} value={this.state.content} placeholder="Task text here"></input>
-          <input type="submit"></input>
         </form>
       </div>
     )

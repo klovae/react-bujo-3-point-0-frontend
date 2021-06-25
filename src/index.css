@@ -80,7 +80,7 @@ div.line {
   border-bottom: 3px solid #888;
   box-sizing: border-box;
   font-size: .9em;
-  margin: 6px;
+  margin: 0px 6px 20px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -90,7 +90,7 @@ form input[type="text"]:focus, form input[type="password"]:focus, form input[typ
   border-bottom: 3px solid #08A854;
 }
 
-input[type=button], input[type=submit] {
+input[type=submit].button {
   background-color: #08A854;
   border: none;
   color: #fff;
@@ -115,7 +115,7 @@ div.task-container {
   margin-bottom: 5px;
 }
 
-button.icon {
+button.icon, input[type=submit].icon {
   width: 24px;
   height: 24px;
   border: none;
@@ -123,6 +123,17 @@ button.icon {
   margin: 0 3px;
   transition: background-image 0.3s linear;
   cursor: pointer;
+}
+
+input[type=submit].add {
+  background-image: url(./images/add-song.png);
+  background-size: contain;
+  margin-bottom: -5px;
+}
+
+input[type=submit].add:hover{
+  background-image: url(./images/add-songblk.png);
+  background-size: contain;
 }
 
 button.complete {
