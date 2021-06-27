@@ -51,7 +51,7 @@ div.line {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto 100px;
   grid-template-areas: 
-     "n n n c c c c c c c c c"
+     "n n b c c c c c c c c c"
      "f f f f f f f f f f f f";
   background-color: rgba(255, 255, 255, .7);
   padding: 3%;
@@ -68,6 +68,15 @@ div.line {
 
 #footer {
   grid-area: f;
+}
+
+#logo {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+#bookmark {
+  grid-area: b;
 }
 
 
@@ -101,11 +110,6 @@ input[type=submit].button {
   padding: 12px 20px;
   margin-top: 20px;
   display: inline-block;
-}
-
-#logo {
-  width: 160px;
-  margin-bottom: 20px;
 }
 
 /* /////////// ICONS ///////////////// */
@@ -146,6 +150,12 @@ button.complete:hover {
   background-size: cover;
 }
 
+button.completed {
+  background-image: url(./images/letter-x.png);
+  background-size: cover;
+  cursor: default;
+}
+
 button.delete {
   background-image: url(./images/rubbish-binblk.png);
   background-size: contain;
@@ -175,4 +185,10 @@ button.migrate {
 button.migrate:hover {
     background-image: url(./images/scroll-arrow-to-rightgrn.png);
     background-size: contain;
+}
+
+button.migrate-disabled {
+  background-image: url(./images/scroll-arrow-to-rightgry.png);
+  background-size: contain;
+  cursor: default;
 }
