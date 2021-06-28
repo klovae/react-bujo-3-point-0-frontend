@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { fetchDays } from "../actions/dayActions";
+import Days from '../components/Days'
 
 
 
@@ -14,9 +15,7 @@ class AllDaysContainer extends Component {
     return (
       <div>
         <h1>All Days</h1>
-        <ul>
-          {this.props.days.map(day => <li key={day.id}>{day.date}</li>)}
-        </ul>
+        <Days days={this.props.days} />
       </div>
     )
   }
