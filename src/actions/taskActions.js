@@ -1,4 +1,4 @@
-export const fetchTasks = () => {
+export const fetchOpenTasks = () => {
   return (dispatch) => {
     console.log('first dispatch')
     dispatch(pendingTasks())

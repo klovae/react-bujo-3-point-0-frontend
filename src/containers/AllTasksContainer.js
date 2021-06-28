@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { fetchTasks } from "../actions/taskActions";
-import { fetchDays } from "../actions/dayActions";
+import { fetchOpenTasks } from "../actions/taskActions";
 import Tasks from '../components/Tasks'
 import TaskInput from '../components/TaskInput'
 
@@ -9,13 +8,13 @@ import TaskInput from '../components/TaskInput'
 class AllTasksContainer extends Component {
 
   componentDidMount() {
-    this.props.fetchTasks()
+    this.props.fetchOpenTasks()
   }
 
   render() {
     return (
       <div>
-        <h1>All Tasks</h1>
+        <h1>All Open Tasks</h1>
         <TaskInput />
         <Tasks tasks={this.props.tasks} />
       </div>
@@ -24,7 +23,7 @@ class AllTasksContainer extends Component {
 }
 
 AllTasksContainer.defaultProps = {
-  tasks: [ "Tasks Are Loading" ]
+  tasks: [ "No Tasks (Yet)" ]
 }
 
 const mapStateToProps = state => {
@@ -36,7 +35,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchTasks: () => dispatch(fetchTasks()),
+    fetchOpenTasks: () => dispatch(fetchOpenTasks()),
   }
 }
 

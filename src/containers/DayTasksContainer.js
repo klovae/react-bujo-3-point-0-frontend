@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
 
-class DayContainer extends Component {
+class DayTasksContainer extends Component {
+
   render() {
     return (
       <h3>Day</h3>
@@ -9,4 +9,4 @@ class DayContainer extends Component {
   }
 }
 
-export default DayContainer
+export default DayTasksContainer

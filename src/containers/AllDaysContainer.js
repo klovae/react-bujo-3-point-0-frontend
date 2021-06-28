@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 import { fetchDays } from "../actions/dayActions";
 import Days from '../components/Days'
+import DayTasksContainer from "./DayTasksContainer";
 
 
 
 class AllDaysContainer extends Component {
-
-  componentDidMount() {
-    this.props.fetchDays()
+  constructor(props) {
+    super()
+    props.fetchDays()
   }
 
   render() {
@@ -16,13 +18,14 @@ class AllDaysContainer extends Component {
       <div>
         <h1>All Days</h1>
         <Days days={this.props.days} />
+        <Route path={`${this.props.match.url}/:dayId`} component={DayTasksContainer}/>
       </div>
     )
   }
 }
 
 AllDaysContainer.defaultProps = {
-  days: [ "Days are loading" ]
+  days: [{ id: null, date: "No days (yet)" }]
 }
 
 

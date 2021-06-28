@@ -18,7 +18,7 @@ class App extends React.Component {
                 <Route exact path="/today" component={DayTasksContainer} />
                 <Route exact path="/tomorrow" component={DayTasksContainer} />
                 <Route exact path="/all-tasks" component={AllTasksContainer} />
-                <Route exact path="/all-days" component={AllDaysContainer} />
+                <Route exact path="/days" render={routerProps => <AllDaysContainer {...routerProps} />}  />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/help" component={Help} />
               </div>
