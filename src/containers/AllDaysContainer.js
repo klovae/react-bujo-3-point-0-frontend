@@ -14,10 +14,10 @@ class AllDaysContainer extends Component {
   }
 
   render() {
-    debugger
     return (
       <div>
-        <Route exact path={`${this.props.match.url}/:id`} render={() => <DayTasksContainer day={this.props.days.find(day => day.id === this.props.match.params.id)} />}/>
+        <Route exact path={`${this.props.match.url}/:id`} render={routerProps => <DayTasksContainer day={this.props.days.find((day) => day.id === +routerProps.match.params.id)}
+              />}/>
         <Days days={this.props.days} />
       </div>
     )
