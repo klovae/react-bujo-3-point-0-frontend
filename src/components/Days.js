@@ -8,6 +8,7 @@ const Days = props => {
 
   return (
     <div>
+      <h2>All Days</h2>
       {renderDays}
     </div>    
   )

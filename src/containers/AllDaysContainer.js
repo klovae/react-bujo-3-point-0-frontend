@@ -8,17 +8,17 @@ import DayTasksContainer from "./DayTasksContainer";
 
 
 class AllDaysContainer extends Component {
-  constructor(props) {
-    super()
-    props.fetchDays()
+  
+  componentDidMount() {
+    this.props.fetchDays()
   }
 
   render() {
+    debugger
     return (
       <div>
-        <h1>All Days</h1>
+        <Route exact path={`${this.props.match.url}/:id`} render={() => <DayTasksContainer day={this.props.days.find(day => day.id === this.props.match.params.id)} />}/>
         <Days days={this.props.days} />
-        <Route path={`${this.props.match.url}/:dayId`} component={DayTasksContainer}/>
       </div>
     )
   }

@@ -4,7 +4,7 @@ class DayTasksContainer extends Component {
 
   render() {
     return (
-      <h3>Day</h3>
+      <h1>Day</h1>
     )
   }
 }
