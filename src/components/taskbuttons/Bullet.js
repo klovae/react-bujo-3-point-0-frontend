@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Bullet = props => {
-  let className
+  let className;
   if (props.completed) {
     className = "icon completed"
   } else {

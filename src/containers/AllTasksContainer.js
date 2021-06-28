@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { fetchTasks } from "../actions/taskActions";
+import { fetchDays } from "../actions/dayActions";
 import Tasks from '../components/Tasks'
 import TaskInput from '../components/TaskInput'
 
 
-class TasksContainer extends Component {
+class AllTasksContainer extends Component {
 
   componentDidMount() {
     this.props.fetchTasks()
@@ -22,7 +23,7 @@ class TasksContainer extends Component {
   }
 }
 
-TasksContainer.defaultProps = {
+AllTasksContainer.defaultProps = {
   tasks: [ "Tasks Are Loading" ]
 }
 
@@ -35,8 +36,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchTasks: () => dispatch(fetchTasks())
+    fetchTasks: () => dispatch(fetchTasks()),
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TasksContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AllTasksContainer);

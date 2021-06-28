@@ -10,8 +10,8 @@ const Task = props => {
       <Bullet completed={props.task.complete} />
       {props.task.content}
       <Migrate completed={props.task.complete} />
-      <button className="icon edit"></button>
-      <button className="icon delete"></button>
+      <Edit />
+      <Delete />
     </div>
   )
 }
