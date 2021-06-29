@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { postTask } from "../actions/taskActions";
 
 class TaskInput extends Component {
   state={
-    content: ''
+    content: '',
+    dayId: 0
   }
 
   handleChange = event => {
     this.setState({
-      content: event.target.value
+      content: event.target.value,
+      dayId: this.props.day.id
     })
   }
 
   handleSubmit = event => {
     event.preventDefault()
-    console.log(this.state.content)
+    this.props.postTask(this.state)
     this.setState({
       content: ''
     })
@@ -31,4 +35,11 @@ class TaskInput extends Component {
   }
 }
 
-export default TaskInput;
+const mapDispatchToProps = dispatch => {
+  return {
+    postTask: (taskObj) => dispatch(postTask(taskObj))
+    }
+  }
+  
+
+export default connect(null, mapDispatchToProps)(TaskInput);

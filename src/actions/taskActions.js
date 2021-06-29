@@ -1,3 +1,5 @@
+import { fetchDays } from "./dayActions"
+
 export const fetchOpenTasks = () => {
   return (dispatch) => {
     console.log('first dispatch')
@@ -24,11 +26,27 @@ export const loadTasks = tasks => {
     tasks
   }
 }
+
+export const postTask = taskObj => {
+  return (dispatch) => {
+  const taskPost = {
+    content: taskObj.content,
+    day_id: taskObj.dayId
+  }
+
+  console.log(taskPost)
 /*
-export const addTask = task => {
-  return {
-    type: 'ADD_TASK',
-    task
+  fetch('http://localhost:3002/tasks', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify(taskPost)
+  })
+    .then(response => response.json())
+    .then(() => {
+      dispatch(fetchDays())
+    })  */
   }
 }
-*/
