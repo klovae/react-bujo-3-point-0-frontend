@@ -5,7 +5,7 @@ export const fetchOpenTasks = () => {
     console.log('first dispatch')
     dispatch(pendingTasks())
     console.log('fetching tasks')
-    fetch('http://localhost:3002/api/tasks')
+    fetch('http://localhost:3001/api/tasks')
       .then(response => response.json())
       .then(taskData => {
         dispatch(loadTasks(taskData))
@@ -36,7 +36,7 @@ export const postTask = taskObj => {
 
   console.log(taskPost)
 
-  fetch('http://localhost:3002/api/tasks', {
+  fetch('http://localhost:3001/api/tasks', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",

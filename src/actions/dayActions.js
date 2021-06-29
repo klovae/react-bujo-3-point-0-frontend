@@ -3,7 +3,7 @@ export const fetchDays = () => {
     console.log('first dispatch')
     dispatch(pendingDays())
     console.log('fetching days')
-    fetch('http://localhost:3002/api/days')
+    fetch('http://localhost:3001/api/days')
       .then(response => response.json())
       .then(daysData => {
         dispatch(loadDays(daysData))
