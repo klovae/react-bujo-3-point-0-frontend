@@ -6,7 +6,6 @@ import Day from "../components/Day";
 class DayTasksContainer extends Component {
 
   render() {
-    console.log(this.props.day)
     return (
       <div>
         <h1><Day day={this.props.day} /></h1>

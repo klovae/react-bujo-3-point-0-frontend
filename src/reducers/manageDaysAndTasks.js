@@ -22,6 +22,16 @@ function daysReducer(state = {days: [], loading: false}, action) {
         days: action.days,
         loading: false
       }
+    case 'ADD_TASK_TO_DAY':
+      let index = state.days.findIndex(day => day.id === action.taskObj.day_id)
+      let taskDay = state.days[index]
+
+      console.log(taskDay)
+      return [
+        ...state.days.slice(0, index),
+        Object.assign({}, taskDay, { tasks: taskDay.tasks.concat(action.taskObj)}),
+        ...state.days.slice(index + 1)
+      ]
     default:
       return state;
   }

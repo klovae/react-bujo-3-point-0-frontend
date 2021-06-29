@@ -15,7 +15,6 @@ class AllTasksContainer extends Component {
     return (
       <div>
         <h1>All Open Tasks</h1>
-        <TaskInput />
         <Tasks tasks={this.props.tasks} />
       </div>
     )

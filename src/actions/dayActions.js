@@ -24,3 +24,10 @@ export const loadDays = days => {
     days
   }
 }
+
+export const addTaskToDay = taskObj => {
+  return {
+    type: 'ADD_TASK_TO_DAY',
+    taskObj
+  }
+}
