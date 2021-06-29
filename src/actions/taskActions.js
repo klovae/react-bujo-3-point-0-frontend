@@ -34,8 +34,6 @@ export const postTask = taskObj => {
     day_id: taskObj.dayId
   }
 
-  console.log(taskPost)
-
   fetch('http://localhost:3001/api/tasks', {
     method: 'POST',
     headers: {
@@ -51,15 +49,15 @@ export const postTask = taskObj => {
   }
 }
 
-export const completeTask = taskObj => {
+export const completeTask = taskId => {
   return (dispatch) => {
     const taskPost = {
-      id: taskObj.id,
+      id: taskId,
       complete: true
     }
 
-    fetch(`http://localhost:3001/api/tasks/${taskObj.id}`, {
-      method: 'POST',
+    fetch(`http://localhost:3001/api/tasks/${taskId}`, {
+      method: 'PATCH',
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"

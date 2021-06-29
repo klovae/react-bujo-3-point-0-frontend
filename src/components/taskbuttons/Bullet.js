@@ -1,16 +1,18 @@
 import React from 'react';
 
 const Bullet = props => {
-  let className;
+  
   if (props.completed) {
-    className = "icon completed"
+    return (
+      <button className='icon completed'></button>
+    )
   } else {
-    className = "icon complete"
+    return (
+      <button onClick={() => props.completeTask(props.taskId)} className='icon complete'></button>
+    )
   }
 
-  return (
-    <button className={className}></button>
-  )
+  
 }
 
 export default Bullet

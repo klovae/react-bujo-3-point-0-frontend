@@ -9,7 +9,7 @@ import { completeTask } from '../actions/taskActions'
 const Task = props => {
   return (
     <div className="task-container">
-      <Bullet completed={props.task.complete} completeTasl={props.completeTask}/>
+      <Bullet completed={props.task.complete} completeTask={props.completeTask} taskId={props.task.id} />
       {props.task.content}
       <Migrate completed={props.task.complete} />
       <Edit />
@@ -19,7 +19,9 @@ const Task = props => {
 }
 
 const mapDispatchToProps = dispatch => {
-  completeTask = () => dispatch(completeTask())
+  return {
+    completeTask: (taskId) => dispatch(completeTask(taskId))
+  }
 }
 
 export default connect(null, mapDispatchToProps)(Task)
