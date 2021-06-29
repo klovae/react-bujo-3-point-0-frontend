@@ -31,3 +31,10 @@ export const addTaskToDay = taskObj => {
     taskObj
   }
 }
+
+export const updateTaskInDay = taskObj => {
+  return {
+    type: 'UPDATE_TASK_IN_DAY',
+    taskObj
+  }
+}

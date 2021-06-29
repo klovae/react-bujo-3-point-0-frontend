@@ -1,4 +1,4 @@
-import { addTaskToDay } from "./dayActions"
+import { addTaskToDay, updateTaskInDay } from "./dayActions"
 
 export const fetchOpenTasks = () => {
   return (dispatch) => {
@@ -35,7 +35,7 @@ export const postTask = taskObj => {
   }
 
   console.log(taskPost)
-  
+
   fetch('http://localhost:3001/api/tasks', {
     method: 'POST',
     headers: {
@@ -48,5 +48,27 @@ export const postTask = taskObj => {
     .then(taskData => {
       dispatch(addTaskToDay(taskData))
     })
+  }
+}
+
+export const completeTask = taskObj => {
+  return (dispatch) => {
+    const taskPost = {
+      id: taskObj.id,
+      complete: true
+    }
+
+    fetch(`http://localhost:3001/api/tasks/${taskObj.id}`, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(taskPost)
+    })
+      .then(response => response.json())
+      .then(taskData => {
+        dispatch(updateTaskInDay(taskData))
+      })
   }
 }
