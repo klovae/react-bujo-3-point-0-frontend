@@ -4,6 +4,7 @@ import DayTasksContainer from './containers/DayTasksContainer';
 import Help from './components/Help';
 import About from './components/About';
 import Menu from './components/Menu';
+import Home from './components/Home';
 import AllTasksContainer from './containers/AllTasksContainer';
 import AllDaysContainer from './containers/AllDaysContainer';
 
@@ -15,6 +16,7 @@ class App extends React.Component {
           <Menu />
           <div id='content-wrap'>
               <div>
+                <Route exact path="/" component={Home} />
                 <Route exact path="/today" component={DayTasksContainer} />
                 <Route exact path="/tomorrow" component={DayTasksContainer} />
                 <Route exact path="/all-tasks" component={AllTasksContainer} />
