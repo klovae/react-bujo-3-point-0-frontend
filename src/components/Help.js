@@ -31,6 +31,35 @@ const Help = () => {
         <p>
           A task in BuJo 3.0 looks like this:
         </p>
+        <div className="task-container">
+          <button className="icon complete"></button>
+          Task content here
+          <button className="icon migrate"></button>
+          <button className="icon edit"></button>
+          <button className="icon delete"></button>
+        </div>
+
+        <p>
+          To complete a task, click <button className='icon complete'></button> and it will become an <button className='icon completed'></button>.
+        </p>
+
+        <p>
+          If you aren't able to complete a task on the day it's listed, use the <button className='icon migrate'></button> to migrate the task. If you're migrating a past task, it will migrate to the current day, and if you migrate a task from today, it will move to tomorrow. You can see tasks that have been migrated are marked with a <button className='icon migrated'></button> instead of a <button className='icon complete'></button>. The actual task has been moved to the current date (where it can be completed).
+        </p>
+
+        <p>
+          Click <button className="icon edit"></button> to edit a task description
+        </p>
+
+        <p>
+          Click <button className="icon delete"></button> to completely delete a task
+        </p>
+
+        <h2>What BuJo 3.0 Can't Do</h2>
+
+        <p>
+          Because BuJo 3.0 primarily deals with the daily log, it doesn't currently have the ability to do anything that involves scheduling; there's no monthly log and no way to schedule specific tasks on specific days other than today and tomorrow.
+        </p>
     </div>
   )
 }

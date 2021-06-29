@@ -187,6 +187,12 @@ button.migrate:hover {
     background-size: contain;
 }
 
+button.migrated {
+  background-image: url(./images/scroll-arrow-to-rightblk.png);
+  background-size: contain;
+  cursor: default;
+}
+
 button.migrate-disabled {
   background-image: url(./images/scroll-arrow-to-rightgry.png);
   background-size: contain;
