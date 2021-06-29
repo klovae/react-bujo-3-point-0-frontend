@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { fetchOpenTasks } from "../actions/taskActions";
 import Tasks from '../components/Tasks'
-import TaskInput from '../components/TaskInput'
 
 
 class AllTasksContainer extends Component {

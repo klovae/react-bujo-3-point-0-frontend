@@ -16,8 +16,19 @@ class AllDaysContainer extends Component {
   render() {
     return (
       <div>
-        <Route exact path={`${this.props.match.url}/:id`} render={routerProps => <DayTasksContainer day={this.props.days.find((day) => day.id === +routerProps.match.params.id)}
-              />}/>
+        <Route path={`${this.props.match.url}/:id`} 
+        render={routerProps => {     
+          if (this.props.days.length < 2) {
+              return <h3>Loading day...</h3>
+          } else {
+          return (
+            <DayTasksContainer 
+              day={this.props.days.find(
+                (day) => day.id === +routerProps.match.params.id)}
+              />)
+              }
+            } 
+        }/>
         <Days days={this.props.days} />
       </div>
     )

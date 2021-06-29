@@ -16,7 +16,6 @@ function daysReducer(state = {days: [], loading: false}, action) {
         loading: true
       }
     case 'LOAD_DAYS':
-      console.log(state)
       return {
         ...state,
         days: action.days,
