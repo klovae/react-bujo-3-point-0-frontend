@@ -35,7 +35,7 @@ export const postTask = taskObj => {
   }
 
   console.log(taskPost)
-
+  
   fetch('http://localhost:3001/api/tasks', {
     method: 'POST',
     headers: {
