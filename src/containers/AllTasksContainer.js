@@ -11,10 +11,17 @@ class AllTasksContainer extends Component {
   }
 
   render() {
+    let taskList
+    if (!this.props.tasks) {
+      taskList = [ "No Tasks (Yet)"] 
+    } else {
+      taskList = this.props.tasks.filter(task => task.complete === false)
+    }
+
     return (
       <div>
         <h1>All Open Tasks</h1>
-        <Tasks tasks={this.props.tasks} />
+        <Tasks tasks={taskList} />
       </div>
     )
   }
