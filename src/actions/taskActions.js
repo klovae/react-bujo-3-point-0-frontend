@@ -1,6 +1,6 @@
 import { addTaskToDay, updateTaskInDay } from "./dayActions"
 
-export const fetchOpenTasks = () => {
+export const fetchTasks = () => {
   return (dispatch) => {
     console.log('first dispatch')
     dispatch(pendingTasks())

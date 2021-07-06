@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { fetchOpenTasks } from "../actions/taskActions";
+import { fetchTasks } from "../actions/taskActions";
 import Tasks from '../components/Tasks'
 
 
 class AllTasksContainer extends Component {
 
   componentDidMount() {
-    this.props.fetchOpenTasks()
+    this.props.fetchTasks()
   }
 
   render() {
@@ -33,7 +33,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchOpenTasks: () => dispatch(fetchOpenTasks()),
+    fetchTasks: () => dispatch(fetchTasks()),
   }
 }
 
